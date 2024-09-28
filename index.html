@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Instagram Photo Feed with Bootstrap</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <i class="fa-brands fa-instagram"></i> Instagram</a
+        >
+        <div class="d-flex align-items-end">
+          <div class="col-9">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Create a new Post
+            </button>
+
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Create a new Post
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">
+                        Caption:
+                      </label>
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="3"
+                        placeholder="Add the caption of your post here"
+                      ></textarea>
+                      <br />
+                      <button class="modal-button" type="button">
+                        <i class="fa-solid fa-camera"></i>
+                      </button>
+                      <button class="modal-button" type="button">
+                        <i class="fa-solid fa-location-dot"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-success">
+                      Publish
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accesibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li>
+                <a class="dropdown-item" href="#" style="color: red">Log Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <nav>
+      <div
+        class="nav nav-tabs justify-content-center"
+        id="nav-tab"
+        role="tablist"
+      >
+        <button
+          class="nav-link active"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-home"
+          type="button"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+        >
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+        <button
+          class="nav-link"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-profile"
+          type="button"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+        >
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-home"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+      >
+        <div class="container-fluid">
+          <div class="row gridrow">
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="alley.jpeg" />
+            </div>
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="alliance.webp" />
+            </div>
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="fog.webp" />
+            </div>
+          </div>
+          <div class="row gridrow">
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="girlbike.jpeg" />
+            </div>
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="guitar.webp" />
+            </div>
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="meeting.webp" />
+            </div>
+          </div>
+          <div class="row gridrow">
+            <div class="col-4">
+              <img
+                class="object-fit-cover w-100 h-100"
+                src="pexels-photo-28003084.webp"
+              />
+            </div>
+            <div class="col-4">
+              <img
+                class="object-fit-cover w-100 h-100"
+                src="red-blue-bricks-pattern.jpg"
+              />
+            </div>
+            <div class="col-4">
+              <img class="object-fit-cover w-100 h-100" src="tuktuk.jpeg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="nav-profile"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <div class="container-fluid tab-content">
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>Alley</h1>
+                <span>10/2024</span>
+              </div>
+              <div class="rounded mx-auto d-block">
+                <img src="alley.jpeg" />
+              </div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>Some dude in an alley</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>Alliance</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="alliance.webp" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>This is a picture of a boat</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>Foggy</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="fog.webp" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>There is so much fog</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>A girl in a bike</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="girlbike.jpeg" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>This is, you guested it, a girl in a bike</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>A guitar</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="guitar.webp" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>Look a her. She's so pretty!</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>A meeting</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="meeting.webp" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>A very important meeting</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>B&W</h1>
+                <span>11/2024</span>
+              </div>
+              <div>
+                <img src="pexels-photo-28003084.webp" />
+              </div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>A picture in black and white.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>A wall</h1>
+                <span>11/2024</span>
+              </div>
+              <div>
+                <img src="red-blue-bricks-pattern.jpg" />
+              </div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>Yeah, just a wall</p>
+              </div>
+            </div>
+          </div>
+          <div class="feedpost d-flex justify-content-center">
+            <div class="col-5 post m-auto">
+              <div class="postname d-flex justify-content-between">
+                <h1>A little whatever</h1>
+                <span>11/2024</span>
+              </div>
+              <div><img src="tuktuk.jpeg" /></div>
+              <div class="description">
+                <b>Liked by 300 people</b>
+                <br />
+                <p>Those bike taxi thingies and stuff</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
